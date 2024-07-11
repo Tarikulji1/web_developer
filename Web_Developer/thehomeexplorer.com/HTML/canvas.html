@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Page</title>
+    </head>
+    <body>
+        <section>
+
+            <h1>Canvas Information: Draw image</h1>
+            
+            <p>Image to use:</p> 
+            <img id="scream" src="https://www.w3schools.com/html/img_the_scream.jpg" alt="The Scream" width="220" height="277">
+
+            <p>Canvas to fill:</p>
+            <canvas id="myCanvas7" width="250" height="300" style="border: 1px solid #011818f5;">
+            Your browser does not support the HTML canvas tag.</canvas>
+
+            <p><button type="button" onclick="myCanvas7()">Try it</button></p>
+
+            <script>
+                function myCanvas7() {
+                    var c = document.getElementById("myCanvas7");
+                    var ctx = c.getContext("2d");
+                    var img = document.getElementById(scream);
+                    ctx.drawImage(img,10,10);
+                }
+            </script>
+            
+        </section>
+        <section>
+        
+            <h1>Canvas Information: Inline in Rectangle</h1>
+
+            <canvas id="myCanvas3" width="200" height="100" style="border: 3px solid #b81111ef;">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas3");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,100);
+            ctx.stroke();
+        </script>
+
+        </section>
+
+        <section>
+        
+            <h1>Canvas Information: Circle in Rectangle</h1>
+
+            <canvas id="myCanvas2" width="200" height="100" style="border: 3px solid #050505f5;">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas2");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        </script>
+
+        </section>
+
+        <section>
+        
+            <h1>Canvas Information: Draw a text</h1>
+
+            <canvas id="myCanvas" width="300" height="200" style="border: 3px solid #010303f5;">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Curier";
+            ctx.filltext("Hello World",30,50);
+            ctx.stroke("Second Planet",40,50);
+        </script>
+
+        </section>
+
+        <section>
+        
+            <h1>Canvas Information: Linear Gradient</h1>
+
+            <canvas id="myCanvas5" width="200" height="100" style="border: 3px solid #0e0d0df5;">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas5");
+            var ctx = c.getContext("2d");
+            
+            // Create gradient
+            var grd = ctx.createLinearGradient(0,0,200,0);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"white");
+            
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10,10,150,80);
+        </script>
+
+        </section>
+
+        <section>
+        
+            <h1>Canvas Information: Circuler Gradient</h1>
+
+            <canvas id="myCanvas6" width="200" height="100" style="border: 3px solid #0e0d0df5;">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas6");
+            var ctx = c.getContext("2d");
+            
+            // Create gradient
+            var grd = ctx.createRadialGradient(90,30,1,90,60,90);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"white");
+            
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10,10,150,80);
+        </script>
+
+        </section>
+    </body>
+</html>

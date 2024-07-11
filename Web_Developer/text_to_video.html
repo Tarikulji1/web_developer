@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Video</title>
+</head>
+<body>
+    <h1>Text to Video Converter</h1>
+    <form id="textToVideoForm">
+        <label for="inputText">Enter Text:</label>
+        <textarea id="inputText" rows="4" cols="50" required></textarea>
+
+        <label for="voiceSelection">Select Voice:</label>
+        <select id="voiceSelection">
+            <option value="male">Male Voice</option>
+            <option value="female">Female Voice</option>
+        </select>
+
+        <button type="button" onclick="convertTextToVideo()">Convert to Video</button>
+    </form>
+
+    <video controls id="outputVideo">
+        <!-- Video output will be displayed here -->
+    </video>
+
+    <script src="main.js"></script>
+</body>
+</html>

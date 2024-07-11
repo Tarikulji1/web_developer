@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Tech Signup Page</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./contactus.html">Contact Us</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a class="active" href="#">Signup</a></li>
+        </ul>
+    </header>
+    
+    <div style="padding: 20px; margin-top: 30px; background-color: #1ABC9C; height: 1500px;">
+            <!-- Registration Form -->
+        <h1>Register into Your Self</h1>
+            <fieldset>
+                <form action="">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" placeholder="Type your name">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="Type your email address">
+                    <br>
+                    <label for="pw">Password:</label>
+                    <input id="pw" type="password" placeholder="Type your password">
+                    <br>
+                    <label for="pw">Confirm Password:</label>
+                    <input id="pw" type="password" placeholder="Type your password again">
+                    <br>
+                    <button>Submit</button>
+                </form>
+            </fieldset>
+        <h3>Already have an account? Click here to <a href="./login.html">Login</a>.</h3>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        Alright reserved &copy; IT Solution World | 2024
+    </footer>
+
+</body>
+</html>

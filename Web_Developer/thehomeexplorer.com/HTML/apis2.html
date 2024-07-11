@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML APIs Page 2</title>
+    </head>
+    <body>
+        <section>    
+            <h2>HTML Web Worker</h2>
+            
+            <p>Count numbers:<output id="result"></output></p>
+            <button type="button" onclick="startWorker()">Start Worker</button>
+            <button type="button" onclick="stopWorker()">Stop Worker</button>
+
+            <p><strong>Note:</strong> Internet Explorer 9 and earliar versions do not support Web Workers.</p>
+
+            <script>
+                var w;
+
+                function startWorker() {
+                    if (typeof(Worker) !== "undefined") {
+                        if(typeof(w) == "undefined") {
+                            w = new Worker("demo_workers.js");
+                        }
+                        w.onmessage = function(event) {
+                        document.getElementById("result").innerHTML = event.data;
+                        };
+                    } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+                    }
+                }
+
+                function stopWorker() {
+                    w.terminate();
+                    w = undefined;
+                }
+            </script>
+            </section>
+
+            <section>
+                <h1>Getting server updates: SSE</h1>
+    
+                <div id="result"></div>
+    
+                <script>
+                    if(typeof(EventSource) !== "undefined") {
+                        var source = new EventSource("demo_see.php");
+                        source.onmessage = function(event) {
+                            document.getElementById("result").innerHTML += event.data + "<br>";
+                        };
+                    } else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+                    }
+                </script>
+            </section>
+    </body>
+</html>

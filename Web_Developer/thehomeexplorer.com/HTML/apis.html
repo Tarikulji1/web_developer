@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML APIs</title>
+        <style>
+
+            #div1 {
+                width: 350px;
+                height: 70px;
+                padding: 10px;
+                border: 5px solid #e01a1a;
+            }
+
+            #div2, #div3 {
+                float: left;
+                width: 100px;
+                height: 35px;
+                margin: 10px;
+                padding: 10px;
+                border: 5px solid black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>HTML Geolocation</h1>
+            <p>Click the button to get your coordinates.</p>
+
+            <button type="button" onclick="getLocation()">Try It</button>
+
+            <p id="demo"></p>
+            
+            <script>
+                const x = document.getElementById("demo");
+
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    } else {
+                        x.innerHTML = "Geolocation is not supported by this browser.";
+                    }
+                }
+
+                function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+                }
+            </script>
+        </section>
+        <section>
+            <h2>Geolocation: Handling Errors and Rejections</h2>
+            <p>Click the button to get your coordinates.</p>
+
+            <button type="button" onclick="getLocation()">Try It</button>
+            
+            <p id="demo"></p>
+
+            <script>
+                const x = document.getElementById("demo");
+
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition, showError);
+                    } else {
+                        x.innerHTML = "Geolocation is not supported by this browser.";
+                    }
+                }
+
+                function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+                }
+
+                function showError(error) {
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            x.innerHTML = "User denied the request for Geolocation."
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            x.innerHTML = "Location information is unavailable."
+                            break;
+                        case error.TIMEOUT:
+                            x.innerHTML = "The request to get user location timed out."
+                            break;
+                        case error.UNKNOWN_ERROR:
+                            x.innerHTML = "An unknown error occurred."
+                            break;
+                    }
+                }
+            </script>
+        </section>
+        <section>
+            <h2>Geolocation Object</h2>
+            <p>Click the button to get your coordinates.</p>
+
+            <button type="button" onclick="getLocation()">Try It</button>
+
+            <p id="demo3"></p>
+
+            <script>
+                const x = document.getElementById("demo3");
+
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.watchPosition(showPosition);
+                    } else {
+                        x.innerHTML = "Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;
+                    }
+                }
+            </script>
+        </section>
+        <section>
+            <h1>HTML Drag and Drop</h1>
+            <p>Drag the W3Schools image into the rectangle:</p>
+
+            <script>
+                
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                }
+
+                function drag(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+                function drop(ev) {
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
+            </script>
+
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <br>
+            <img id="drag1" src="https://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+        
+        </section>
+        <section>
+            <h2>Drag and Drop</h2>
+            <p>Drag the image back and forth between the two div elements.</p>
+
+            <script>
+                
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                }
+
+                function drag(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+                function drop(ev) {
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
+
+            </script>
+
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img id="drag2" src="https://www.w3schools.com/html/img_w3slogo.gif" draggable="true" ondragstart="drag(event)" width="88" height="31">
+            </div>
+            <br>
+            
+            <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        </section>
+        <br>
+        <br>
+        <section>
+            <h2>Web Storage</h2>
+            
+            <div id="result"></div>
+
+            <script>
+                // Check browser support
+                if (typeof(Storage) !== "undefined") {
+                    // Store
+                    localStorage.setItem("lastname", "Islam");
+                    // Retrieve
+                    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+                } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+                }
+            </script>
+            
+        </section>
+        <section>
+            <h2>Increase counting</h2>    
+                <script>
+                    function clickCounter() {
+                        if (typeof(Storage) !== "undefined") {
+                            if (localStorage.clickcount) {
+                                localStorage.clickcount = Number(localStorage.clickcount)+1;
+                            } else {
+                                localStorage.clickcount = 1;
+                            }
+                        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + "time(s).";
+                    } else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                    }
+                    }
+                </script>
+
+                <p><button type="button" onclick="clickCounter()">Click me!</button></p>
+
+                <div id="result"></div>
+
+                <p>Click the button to see the counter increase.</p>
+                <p>Close the browser tab ( or window ), and try again, and the counteর উইল continue to count (is not reset).</p>
+        </section>
+
+        <section>
+            <h2> Erase increase counting</h2>    
+                <script>
+                    function clickCounter() {
+                        if (typeof(Storage) !== "undefined") {
+                            if (sessionStorage.clickcount) {
+                                sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                            } else {
+                                sessionStorage.clickcount = 1;
+                            }
+                        document.getElementById("result2").innerHTML = "You have clicked the button " + sessionStorage.clickcount + "time(s) in this session.";
+                    } else {
+                        document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
+                    }
+                    }
+                </script>
+
+                <p><button type="button" onclick="clickCounter()">Click me!</button></p>
+
+                <div id="result2"></div>
+
+                <p>Click the button to see the counter increase.</p>
+                <p>Close the browser tab ( or window ), and try again, and the counter is reset.</p>
+        </section>
+
+        <section>
+            <h2>HTML Web Worker</h2>
+            
+            <p>Count numbers:<output id="result"></output></p>
+            <button type="button" onclick="startWorker()">Start Worker</button>
+            <button type="button" onclick="stopWorker()">Stop Worker</button>
+
+            <p><strong>Note:</strong> Internet Explorer 9 and earliar versions do not support Web Workers.</p>
+
+            <script>
+                var w;
+
+                function startWorker() {
+                    if (typeof(Worker) !== "undefined") {
+                        if(typeof(w) == "undefined") {
+                            w = new Worker("demo_workers.js");
+                        }
+                        w.onmessage = function(event) {
+                        document.getElementById("result").innerHTML = event.data;
+                        };
+                    } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+                    }
+                }
+
+                function stopWorker() {
+                    w.terminate();
+                    w = undefined;
+                }
+            </script>
+        </section>
+        
+        <section>
+            <h1>Getting server updates: SSE</h1>
+
+            <div id="result"></div>
+
+            <script>
+                if(typeof(EventSource) !== "undefined") {
+                    var source = new EventSource("demo_see.php");
+                    source.onmessage = function(event) {
+                        document.getElementById("result").innerHTML += event.data + "<br>";
+                    };
+                } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+                }
+            </script>
+        </section>
+    </body>
+</html>

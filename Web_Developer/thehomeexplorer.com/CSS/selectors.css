@@ -1,0 +1,100 @@
+/* id selector */
+#heading {
+    color:blue;
+    background-color:rgb(158, 241, 214);
+    text-align: center;
+}
+
+/* class selector */
+.heading2 {
+    color: purple;
+    text-align: right;
+}
+
+/* name selector */
+p {
+    color:red;
+    text-align:left;
+}
+
+/* p element under center */
+p.center {
+    color: chartreuse;
+    text-align: center;
+}
+
+/* p element under large */
+p.large {
+    font-size: 300%;
+}
+
+/* Universal selector */
+* {
+    font-size: 120%;
+    text-align: left;
+    background-color: rgb(243, 227, 212);
+}
+
+/* Margin selector */
+div {
+    border: 3px solid skyblue;
+    background-color: aquamarine;
+    width: 300px;
+    margin: auto;
+    padding: 70px; 
+    /* margin-top: 100px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+    margin-left: 80px; */
+}
+
+/* Margin Shorthand
+    div {margin: 100px 150px 100px 80px; */
+
+/* inherit */
+div.ex2 {
+    border: 3px solid purple;
+    margin-left: 100px;
+}
+p.ex1 {
+    margin-left: inherit;
+}
+
+div.ex3 {
+    width: 300px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: lightblue;
+}
+
+div.ex4 {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+/* calculate width */
+div.ex5 {
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+    /* outline: 10px solid red; */
+}
+
+/* google font use */
+body {
+    font-family: "Audiowide", sans-serif;
+}
+div.ex4 {
+    font-family: "Sofia", sans-serif;
+    
+}
+
+div.ex5 {
+    font-family: "Trirong", sans-serif;
+}
+

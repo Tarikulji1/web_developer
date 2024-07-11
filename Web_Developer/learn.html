@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> CSS Template </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Free Web Tutorials">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Tarikul Islam">
+		<meta http-equiv="refresh" content="30">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			body {
+				background-color: rgb(216, 245, 50);
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			
+			/*Style the header */
+			header {
+					background-color: #df0e0e;
+					padding: 30px;
+					text-align: center;
+					font-size: 35px;
+					color: rgb(29, 216, 230);
+			}
+			
+			/* Container for flexboxes */
+			section {
+					display: -webkit-flex;
+					display: flex;
+			}
+			
+			/* Style the navigation menu */
+			nav {
+				-webkit-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				background: #ccc;
+				padding: 20px;
+			}
+			
+			/* Create two columns/boxes that floats next to each other */
+			nav {
+				float: left;
+				width: 30%;
+				
+				/* only for demonstration, should be removed */
+				background: #ccc;
+				padding: 20px;
+			}
+			
+			/* Style the list inside the menu */
+			nav ul {
+					list-style-type: none;
+					padding: 0;
+			}
+			
+			/* Style the content */
+			article {
+					-webkit-flex: 3;
+					-ms-flex: 3;
+					flex: 3;
+					float: left;
+					padding: 10px;
+					width: 70%;
+					background-color: #1d73a5a4;
+					/* only for demonstration, should be removed */
+			}
+			
+			/* Clear floats after the columns */
+			section::after {
+							content: "";
+							display: table;
+							clear: both;
+			}
+			
+			/* Style the footer */
+			footer {
+					background-color: #e688be;
+					padding: 10px;
+					text-align: center;
+					color: rgb(127, 76, 248);
+			}
+			
+			/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+			@media (max-width: 600px) {
+				section {
+						-webkit-flex-direction: column;
+						flex-direction: column;
+						}
+			}
+			
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+			@media (max-width: 600px) {
+				nav, article {
+						width: 100%;
+						height: auto;
+						}
+			}
+		</style>
+		<link rel="stylesheet" href="mystyle.css">
+		<script>
+			function myFunction() {
+				document.getElementById("demo").innerHTML = "Hello JavaScript!";
+			}
+		</script>
+		<base href="https://www.w3schools.com/" target="_blank">
+	</head>
+	<body>
+	
+		<h2> CSS Layout Float </h2>
+		<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+		<p>Resize the browser window to see the Responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+	
+		<header>
+			<h2> Cities </h2>
+		</header>
+		
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#"> Mumbai </a></li>
+					<li><a href="#"> Chennai </a></li>
+					<li><a href="#"> Kolkata </a></li>
+					<li><a href="#"> Jaipur </a></li>
+					<li><a href="#"> Agra </a></li>
+					<li><a href="#"> Ahmedabad </a></li>
+					<li><a href="#"> Bengaluru </a></li>
+					<li><a href="#"> Hyderabad </a></li>
+					<li><a href="#"> Varanasi </a></li>
+					<li><a href="#"> Lucknow </a></li>
+					<li><a href="#"> Visakhapatnam </a></li>
+					<li><a href="#"> Pune </a></li>
+					<li><a href="#"> Bhopal </a></li>
+					<li><a href="#"> Surat </a></li>
+					<li><a href="#"> Amritsar </a></li>
+					<li><a href="#"> Nagpur </a></li>
+					<li><a href="#"> Patna </a></li>
+					<li><a href="#"> Kanpur </a></li>
+					<li><a href="#"> Indore </a></li>
+					<li><a href="#"> Prayagraj </a></li>
+					<li><a href="#"> Nashik </a></li>
+					<li><a href="#"> Vadodara </a></li>
+					<li><a href="#"> New Delhi </a></li>
+					<li><a href="#"> Aurangabad </a></li>
+					<li><a href="#"> Kochi </a></li>
+					<li><a href="#"> Chandigarh </a></li>
+					<li><a href="#"> Madurai </a></li>
+					<li><a href="#"> Jodhpur </a></li>
+					<li><a href="#"> Mysuru </a></li>
+					<li><a href="#"> Bhubaneswar </a></li>
+					<li><a href="#"> Ludhiana </a></li>
+					<li><a href="#"> Dehradun </a></li>
+					<li><a href="#"> Jamshedpur </a></li>
+					<li><a href="#"> Rajkot </a></li>
+					<li><a href="#"> Gwalior </a></li>
+					<li><a href="#"> Faridabad </a></li>
+					<li><a href="#"> Coimbatore </a></li>
+					<li><a href="#"> Meerut </a></li>
+					<li><a href="#"> Guwahati </a></li>
+					<li><a href="#"> Vijayawada </a></li>
+					<li><a href="#"> Raipur </a></li>
+					<li><a href="#"> Ranchi </a></li>
+					<li><a href="#"> Jabalpur </a></li>
+					<li><a href="#"> Thiruvananthapuram </a></li>
+					<li><a href="#"> Mangaluru </a></li>
+					<li><a href="#"> Warangal </a></li>
+					<li><a href="#"> Kota </a></li>
+					<li><a href="#"> Puducherry </a></li>
+					<li><a href="#"> Dhanbad </a></li>
+					<li><a href="#"> Bhilai </a></li>
+					<li><a href="#"> Solapur </a></li>
+				</ul>
+			</nav>
+			
+			<article>
+				<h1> Mumbai </h1>
+				<h5> Population 12 million </h5>
+				<p>Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. A financial center, it's India's largest city. On the Mumbai Harbour waterfront stands the iconic Gateway of India stone arch, built by the British Raj in 1924. Offshore, nearby Elephanta Island holds ancient cave temples dedicated to the Hindu god Shiva. The city's also famous as the heart of the Bollywood film industry.</p>
+				
+				<h1> Chennai </h1>
+				<h5> Population 12 million </h5>
+				<p>Chennai, on the Bay of Bengal in eastern India, is the capital of the state of Tamil Nadu. The city is home to Fort St. George, built in 1644 and now a museum showcasing the city’s roots as a British military garrison and East India Company trading outpost, when it was called Madras. Religious sites include Kapaleeshwarar Temple, adorned with carved and painted gods, and St. Mary’s, a 17th-century Anglican church.</p>
+			
+				<h1> Kolkata </h1>
+				<h5> Population 4.5 million </h5>
+				<p>Kolkata (formerly Calcutta) is the capital of India's West Bengal state. Founded as an East India Company trading post, it was India's capital under the British Raj from 1773–1911. Today it’s known for its grand colonial architecture, art galleries and cultural festivals. It’s also home to Mother House, headquarters of the Missionaries of Charity, founded by Mother Teresa, whose tomb is on site.</p>
+			
+				<h1> Jaipur </h1>
+				<h5> Population 3.1 million </h5>
+				<p>Jaipur is the capital of India’s Rajasthan state. It evokes the royal family that once ruled the region and that, in 1727, founded what is now called the Old City, or “Pink City” for its trademark building color. At the center of its stately street grid (notable in India) stands the opulent, colonnaded City Palace complex. With gardens, courtyards and museums, part of it is still a royal residence.</p>
+			
+				<h1> Agra </h1>
+				<h5> Population 1.6 million </h5>
+				<p>Agra is a city on the banks of the Yamuna river in the Indian state of Uttar Pradesh, about 230 kilometres south-east of the national capital Delhi and 330 km west of the state capital Lucknow.</p>
+			
+				<h1> Ahmedabad </h1>
+				<h5> Population 5.6 million </h5>
+				<p>Ahmedabad, in western India, is the largest city in the state of Gujarat. The Sabarmati River runs through its center. On the western bank is the Gandhi Ashram at Sabarmati, which displays the spiritual leader’s living quarters and artifacts. Across the river, the Calico Museum of Textiles, once a cloth merchant's mansion, has a significant collection of antique and modern fabrics.</p>
+
+				<h1> Bengaluru </h1>
+				<h5> Population 8.4 million </h5>
+				<p>Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state. The center of India's high-tech industry, the city is also known for its parks and nightlife. By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative building. Former royal residences include 19th-century Bangalore Palace, modeled after England’s Windsor Castle, and Tipu Sultan’s Summer Palace, an 18th-century teak structure.</p>
+				
+				<h1> Hyderabad </h1>
+				<h5> Population 6.8 million </h5>
+				<p>Hyderabad is the capital of southern India's Telangana state. A major center for the technology industry, it's home to many upscale restaurants and shops. Its historic sites include Golconda Fort, a former diamond-trading center that was once the Qutb Shahi dynastic capital. The Charminar, a 16th-century mosque whose 4 arches support towering minarets, is an old city landmark near the long-standing Laad Bazaar.</p>
+				
+				<h1> Varanasi </h1>
+				<h5> Population 1.2 million </h5>
+				<p>Varanasi is a city in the northern Indian state of Uttar Pradesh dating to the 11th century B.C. Regarded as the spiritual capital of India, the city draws Hindu pilgrims who bathe in the Ganges River’s sacred waters and perform funeral rites. Along the city's winding streets are some 2,000 temples, including Kashi Vishwanath, the “Golden Temple,” dedicated to the Hindu god Shiva.</p>
+				
+				<h1> Lucknow </h1>
+				<h5> Population 3.5 million </h5>
+				<p>Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in 1881.</p>
+				
+				<h1> Visakhapatnam </h1>
+				<h5> Population 2.1 million </h5>
+				<p>Visakhapatnam is a port city and industrial center in the Indian state of Andhra Pradesh, on the Bay of Bengal. It's known for its many beaches, including Ramakrishna Beach, home to a preserved submarine at the Kursura Submarine Museum. Nearby are the elaborate Kali Temple and the Visakha Museum, an old Dutch bungalow housing local maritime and historical exhibits.</p>
+				
+				<h1> Bhopal </h1>
+				<h5> Population 1.8 million </h5>
+				<p>Bhopal is a city in the central Indian state of Madhya Pradesh. It's one of India’s greenest cities. There are two main lakes, the Upper Lake and the Lower Lake. On the banks of the Upper Lake is Van Vihar National Park, home to tigers, lions and leopards. The State Museum has fossils, paintings and rare Jain sculptures. Taj-ul-Masjid is one of Asia’s largest mosques, with white domes, minarets and a huge courtyard.</p>
+				
+				<h1> Pune </h1>
+				<h5> Population 3.1 million </h5>
+				<p>Pune is a sprawling city in the western Indian state of Maharashtra. It was once the base of the Peshwas (prime ministers) of the Maratha Empire, which lasted from 1674 to 1818. It's known for the grand Aga Khan Palace, built in 1892 and now a memorial to Mahatma Gandhi, whose ashes are preserved in the garden. The 8th-century Pataleshwar Cave Temple is dedicated to the Hindu god Shiva.</p>
+			
+				<h1> Surat </h1>
+				<h5> Population 6.9 million </h5>
+				<p>Surat is a large city beside the Tapi River in the west Indian state of Gujarat. Once known for silk weaving, Surat remains a commercial center for textiles, and the New Textile Market area is lined with fabric shops. Overlooking the river, Surat Castle was built in the 1500s to defend the city against Portuguese colonists. Nearby, the Dutch, Armenian and English cemeteries contain elaborate colonial-era tombs.</p>
+			
+				<h1> Amritsar </h1>
+				<h5> Population 1.6 million </h5>
+				<p>Amritsar is a city in the northwestern Indian state of Punjab, 28 kilometers from the border with Pakistan. At the center of its walled old town, the gilded Golden Temple (Harmandir Sahib) is the holiest gurdwara (religious complex) of the Sikh religion. It’s at the end of a causeway, surrounded by the sacred Amrit Sarovar tank (lake), where pilgrims bathe.</p>
+			
+				<h1> Nagpur </h1>
+				<h5> Population 2.4 million </h5>
+				<p>Nagpur is a large city in the central Indian state of Maharashtra. The 19th-century Nagpur Central Museum displays items found locally, including fossils, sarcophagi and Mughal weaponry. The Raman Science Centre has hands-on exhibits and a planetarium. Sitabuldi Fort, in the Sitabuldi Hills, was the site of an 1817 battle. To the southwest, the immense, domed Deekshabhoomi is a Buddhist monument and pilgrimage site.</p>
+			
+				<h1> Patna </h1>
+				<h5> Population 2.0 million </h5>
+				<p>Patna is an ancient city that sprawls along the south bank of the Ganges River in Bihar, northeast India. The state capital, it’s home to Bihar Museum, a contemporary landmark exhibiting bronze sculptures and old coins from the region. Nearby, Indo-Saracenic–style Patna Museum displays a casket believed to contain the Buddha’s ashes. Close to the river, the Golghar is a domed colonial granary overlooking the city.</p>
+			
+				<h1> Kanpur </h1>
+				<h5> Population 2.9 million </h5>
+				<p>Kanpur, formerly anglicised as Cawnpore, is a large industrial city located in the central-western part of the state of Uttar Pradesh, India. Founded in 1207, Kanpur became one of the most important commercial and military stations of British India. Kanpur is also the financial capital of Uttar Pradesh.</p>
+				
+				<h1> Prayagraj </h1>
+				<h5> Population _____ million </h5>
+				<p>Prayagraj, also known as Allahabad, Ilahabad or Prayag, is a metropolis in the Indian state of Uttar Pradesh. It is the administrative headquarters of the Prayagraj district—the most populous district in the state and 13th most populous district in India—and the Prayagraj division.</p>
+				
+				<h1> Indore </h1>
+				<h5> Population 2.2 million </h5>
+				<p>Indore is a city in west-central India. It’s known for the 7-story Rajwada Palace and the Lal Baag Palace, which date back to Indore’s 19th-century Holkar dynasty. The Holkar rulers are honored by a cluster of tombs and cenotaphs at Chhatri Baag. The night market Sarafa Bazar sells street food. East is the Indo-Gothic Gandhi Hall and clock tower. The Jain temple Kanch Mandir has a mirrored mosaic interior.</p>
+				
+				<h1> New Delhi </h1>
+				<h5> Population 250,000 </h5>
+				<p>New Delhi is the capital of India and a part of the National Capital Territory of Delhi. New Delhi is the seat of all three branches of the Government of India, hosting the Rashtrapati Bhavan, Sansad Bhavan, and the Supreme Court.</p>
+				
+				<h1> Nashik </h1>
+				<h5> Population 1.5 million </h5>
+				<p>Nashik is an ancient holy city in Maharashtra, a state in western India. It’s known for its links to the “Ramayana” epic poem. On the Godavari River is Panchavati, a temple complex. Nearby, Lord Rama was thought to have bathed at Ram Kund water tank, today attended by Hindu devotees. Shri Kalaram Sansthan Mandir is an ancient shrine to Rama, while Rama and Sita are said to have worshipped at Sita Gufaa caves.</p>
+				
+				<h1> Vadodara </h1>
+				<h5> Population 2.2 million </h5>
+				<p>Vadodara, also known as Baroda, is a major city in the Indian state of Gujarat. It serves as the administrative headquarters of the Vadodara district and is situated on the banks of the Vishwamitri River, 141 km from the state capital of Gandhinagar.</p>
+				
+				<h1> Aurangabad </h1>
+				<h5> Population 1.2 million </h5>
+				<p>Aurangabad is a city in Maharashtra state, in India. It’s known for the 17th-century marble Bibi ka Maqbara shrine, styled on the Taj Mahal. The nearby Shivaji Maharaj Museum, dedicated to the Maratha king Shivaji, displays war weapons and a coin collection. North of the city, the Aurangabad Caves comprise ancient, rock-cut Buddhist shrines. West of the city, battlements surround the medieval Daulatabad Fort.</p>
+				
+				<h1> Kochi </h1>
+				<h5> Population 2.1 million </h5>
+				<p>Kochi (also known as Cochin) is a city in southwest India's coastal Kerala state. It has been a port since 1341, when a flood carved out its harbor and opened it to Arab, Chinese and European merchants. Sites reflecting those influences include Fort Kochi, a settlement with tiled colonial bungalows and diverse houses of worship. Cantilevered Chinese fishing nets, typical of Kochi, have been in use for centuries.</p>
+				
+				<h1> Chandigarh </h1>
+				<h5> Population _____ million </h5>
+				<p>Chandigarh, the capital of the northern Indian states of Punjab and Haryana, was designed by the Swiss-French modernist architect, Le Corbusier. His buildings include the Capitol Complex with its High Court, Secretariat and Legislative Assembly, as well as the giant Open Hand Monument. The nearby Rock Garden is a park featuring sculptures made of stones, recycled ceramics and industrial relics.</p>
+				
+				<h1> Madurai </h1>
+				<h5> Population 1.0 million </h5>
+				<p>Madurai is an energetic, ancient city on the Vaigai River in the South Indian state of Tamil Nadu. Its skyline is dominated by the 14 colorful gopurams (gateway towers) of Meenakshi Amman Temple. Covered in bright carvings of Hindu gods, the Dravidian-style temple is a major pilgrimage site. Millions attend the processions and ceremonies of April's Chithirai Festival celebrating Meenakshi and Lord Vishnu.</p>
+				
+				<h1> Jodhpur </h1>
+				<h5> Population 1.5 million </h5>
+				<p>Jodhpur is a city in the Thar Desert of the northwest Indian state of Rajasthan. Its 15th-century Mehrangarh Fort is a former palace that’s now a museum, displaying weapons, paintings and elaborate royal palanquins (sedan chairs). Set on on a rocky outcrop, the fort overlooks the walled city, where many buildings are painted the city’s iconic shade of blue.</p>
+				
+				<h1> Mysuru </h1>
+				<h5> Population 920,000 </h5>
+				<p>Mysore (or Mysuru), a city in India's southwestern Karnataka state, was the capital of the Kingdom of Mysore from 1399 to 1947. In its center is opulent Mysore Palace, seat of the former ruling Wodeyar dynasty. The palace blends Hindu, Islamic, Gothic and Rajput styles. Mysore is also home to the centuries-old Devaraja Market, filled with spices, silk and sandalwood.</p>
+				
+				<h1> Bhubaneswar </h1>
+				<h5> Population 840,000 </h5>
+				<p>Bhubaneswar is an ancient city in India’s eastern state of Odisha, formerly Orissa. Many temples built from sandstone are dotted around Bindu Sagar Lake in the old city, including the 11th-century Hindu Lingaraja Temple. Outside Rajarani Temple are sculpted figures of the guardians of the 8 cardinal and ordinal directions. Jain antiques, weaponry and indigenous pattachitra paintings fill the Odisha State Museum.</p>
+				
+				<h1> Jamshedpur </h1>
+				<h5> Population _____ million </h5>
+				<p>Jamshedpur is a large city set between the Subarnarekha and Kharkai rivers in the east Indian state of Jharkhand. It’s known for huge, tree-lined Jubilee Park, where the Tata Steel Zoological Park has resident species including tigers and leopards. To the east, the hilltop Bhuvaneshwari Temple has an elaborate 5-story entrance tower. North of the city, elephants roam through the forests at Dalma Wildlife Sanctuary.</p>
+				
+				<h1> Dehradun </h1>
+				<h5> Population _____ million </h5>
+				<p>Dehradun is the capital of the Indian state of Uttarakhand, near the Himalayan foothills. At its core is the 6-sided Ghanta Ghar clock tower. To the southwest is Paltan Bazaar, a busy shopping area. Just east is the Sikh temple Gurdwara Nanaksar, topped with ornate white and golden domes. In Clement Town to the city’s southwest, Mindrolling Monastery is a Tibetan Buddhist center with shrine rooms in its Great Stupa.</p>
+				
+				<h1> Ludhiana </h1>
+				<h5> Population 1.6 million </h5>
+				<p>Ludhiana is a large industrial city in the north Indian state of Punjab. The Punjab Agricultural University is home to the Museum of Rural Life, which displays pottery, musical instruments and traditional Punjabi clothing. Nearby, leafy Nehru Rose Garden features ornamental fountains and more than one thousand different rose varieties. To the north, Maharaja Ranjit Singh War Museum documents Punjabi military history.</p>
+				
+				<h1> Gwalior </h1>
+				<h5> Population 1.1 million </h5>
+				<p>Gwalior is a city in the central Indian state of Madhya Pradesh. It's known for its palaces and temples, including the Sas Bahu Ka Mandir intricately carved Hindu temple. Ancient Gwalior Fort occupies a sandstone plateau overlooking the city and is accessed via a winding road lined with sacred Jain statues. Within the fort’s high walls is the 15th-century Gujari Mahal Palace, now an archaeological museum.</p>
+				
+				<h1> Rajkot </h1>
+				<h5> Population 2.0 million </h5>
+				<p>Rajkot is a city in the western Indian state of Gujarat. In central Jubilee Garden are the Lang Library, with Gujarati literature, and the Watson Museum, with paintings and artifacts documenting British colonial rule. Kaba Gandhi No Delo, the house where Mahatma Gandhi spent part of his childhood, displays photos of the Indian leader and his belongings. The Rotary Dolls Museum exhibits dolls from around the world.</p>
+				
+				<h1> Faridabad </h1>
+				<h5> Population 1.4 million </h5>
+				<p>Faridabad is the most populous city in the Indian state of Haryana and a part of Delhi National Capital Region. It is one of the major satellite cities around Delhi and is located 284 kilometres south of the state capital Chandigarh. The river Yamuna forms the eastern district boundary with Uttar Pradesh.</p>
+				
+				<h1> Guwahati </h1>
+				<h5> Population 960,000 </h5>
+				<p>Guwahati is a sprawling city beside the Brahmaputra River in the northeast Indian state of Assam. It’s known for holy sites like the hilltop Kamakhya Temple, featuring shrines to the Hindu deities Shiva and Vishnu. To the east, 18th-century Navagraha Temple is an astronomical center with planetary shrines. Umananda Temple, dedicated to Shiva and covered with engravings, stands on Peacock Island in the river.</p>
+				
+				<h1> Coimbatore </h1>
+				<h5> Population 1.6 million </h5>
+				<p>Coimbatore is a city in the south Indian state of Tamil Nadu. To the northwest is the centuries-old, Dravidian-style Arulmigu Subramaniyaswami Temple, Marudamalai. The colorful and intricately carved Arulmigu Patteeswarar Swamy Temple lies southeast of here. In the center, the Gass Forest Museum has a huge collection of preserved animals and tree trunks. Southeast, birds and butterflies inhabit Singanallur Lake.</p>
+				
+				<h1> Meerut </h1>
+				<h5> Population 1.6 million </h5>
+				<p>Meerut is a city in Meerut district of the western part of the Indian state of Uttar Pradesh. The city lies 80 km northeast of the national capital New Delhi, within the National Capital Region and 480 km west of the state capital Lucknow.</p>
+				
+				<h1> Raipur </h1>
+				<h5> Population 1.0 million </h5>
+				<p>Raipur is the capital city of Chhattisgarh state in central India. In the center, the ancient Dudhadhari Math temple is a sacred monument dedicated to Lord Rama, decorated with scenes from the epic poem “Ramayana.” Nearby, a statue of the Hindu monk Swami Vivekananda towers over Vivekananda Sarovar lake. Southeast, Purkhouti Muktangan is an open-air museum featuring landscaped grounds, statues and tribal artifacts.</p>
+				
+				<h1> Vijayawada </h1>
+				<h5> Population 1.0 million </h5>
+				<p>Vijayawada is a city in the southeast Indian state of Andhra Pradesh. It's known for the ornate Kanaka Durga Temple, which sits atop a hill overlooking the city. The Undavalli Caves feature ancient rock-cut temples, carved out of a sandstone hillside and adorned with elaborate statues. The massive Prakasam Barrage stretches across the Krishna River. Nearby is Bhavani Island, with forests and waterfront gardens.</p>
+				
+				<h1> Ranchi </h1>
+				<h5> Population 1.1 million </h5>
+				<p>Ranchi is the capital of the Indian state of Jharkhand. Ranchi was the centre of the Jharkhand movement, which called for a separate state for the tribal regions of South Bihar, northern Odisha, western West Bengal and the eastern area of what is present-day Chhattisgarh.</p>
+				
+				<h1> Jabalpur </h1>
+				<h5> Population 1.1 million </h5>
+				<p>Jabalpur is a city in the central Indian state of Madhya Pradesh. On a rocky hilltop on the western outskirts of the city is the Madan Mahal Fort, built in 1116. Farther west, the centuries-old Pisanhari Ki Madiya Jain temple offers views of the city. Another Jain temple, Hanumantal Bada Jain Mandir, sits on the shore of a lake in the north. The central Rani Durgavati Museum displays intricately carved sculptures.</p>
+				
+				<h1> Thiruvananthapuram </h1>
+				<h5> Population _____ million </h5>
+				<p>Thiruvananthapuram (or Trivandrum) is the capital of the southern Indian state of Kerala. It's distinguished by its British colonial architecture and many art galleries. It’s also home to Kuthira Malika (or Puthen Malika) Palace, adorned with carved horses and displaying collections related to the Travancore royal family, whose regional capital was here from the 18th–20th centuries.</p>
+				
+				<h1> Mangaluru </h1>
+				<h5> Population _____ million </h5>
+				<p>Mangalore (or Mangaluru) is an Arabian Sea port and a major commercial center in the Indian state of Karnataka. It's home to the Kadri Manjunath Temple, known for its bronze statues, and the 9th-century Mangaladevi Temple. Its Catholic sites include Milagres Church, dating to the 17th century, and St. Aloysious Chapel, which features interior paintings. Tannirbhavi Beach is popular for its sunset views.</p>
+				
+				<h1> Kota </h1>
+				<h5> Population 1.0 million </h5>
+				<p>Kota is a city on the Chambal River in Rajasthan, northern India. Inside the Kota Garh, or City Palace, the Maharao Madho Singh Museum exhibits miniature paintings and antique weapons. South, along the river, tranquil Chambal Garden has a pond with crocodiles. Northeast, 18th-century Jagmandir Palace sits in the middle of Kishore Sagar Lake. Seven Wonders Park includes mini replicas of the Eiffel Tower and Taj Mahal.</p>
+				
+				<h1> Warangal </h1>
+				<h5> Population 700,000 </h5>
+				<p>Warangal is a city in the south Indian state of Telangana. It was the capital of the Kakatiya dynasty from the 12th to 14th centuries, and many intricately carved monuments from this period still stand. Among them are the ruins of 13th-century Warangal Fort and the Thousand Pillar Temple, built in 1163. Set on a lake, Bhadrakali Temple dates to the 7th century and is dedicated to the Hindu goddess Kali.</p>
+				
+				<h1> Puducherry </h1>
+				<h5> Population 240,000 </h5>
+				<p>Pondicherry (or Puducherry), a French colonial settlement in India until 1954, is now a Union Territory town bounded by the southeastern Tamil Nadu state. Its French legacy is preserved in its French Quarter, with tree-lined streets, mustard-colored colonial villas and chic boutiques. A seaside promenade runs along the Bay of Bengal and passes several statues, including a 4m-high Gandhi Memorial.</p>
+				
+				<h1> Dhanbad </h1>
+				<h5> Population 1.2 million </h5>
+				<p>Dhanbad is the second-most populated city in the Indian state of Jharkhand after Jamshedpur. It ranks as the 42nd largest city in India and is the 33rd largest million-plus urban agglomeration in India.</p>
+				
+				<h1> Bhilai </h1>
+				<h5> Population 620,000 </h5>
+				<p>Bhilai is a city in Durg district of the Indian state of Chhattisgarh, in eastern central India. Along with its twin-city Durg, the urban agglomeration of Durg-Bhilainagar has a population of more than a million, making it the second-largest urban area in Chhattisgarh after Raipur.</p>
+				
+				<h1> Solapur </h1>
+				<h5> Population 950,000 </h5>
+				<p>Solapur is a city located in the south-western region of the Indian state of Maharashtra, close to its border with Karnataka.</p>
+				
+			</article>
+		</section>
+		
+		<footer>
+			<p> Footer </p>
+			<p> The content of the body element is displayed in the browser window. </p>
+		<p> The content of the title element is displayed in the browser tab, in favorites and in search-engine results. </p>
+		
+		<p> External link CSS add. </p>
+		
+		<p> All meta information goes in head section. </p>
+		
+		<p id="demo"> A paragraph </p>
+		<button type="button" onclick="myFunction()">Try It</button>
+		
+		<h2> The base element</h2>
+		<p><img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+		- Notice that we have only specified a relative address for the image. Since we have specified a base URL in the head section, the browser will look for the image at "https://www.w3schools.com/images/stickman.gif".
+		</p>
+		
+		<p><a href="tags/tag_base.asp">HTML base tag</a>
+		- Notice that the link opens in a new window, even if it has no target="_blank" attribute. This is because the target attribute of the base element is set to "_blank".
+		</p>
+		</footer>
+		
+	</body>
+</html>

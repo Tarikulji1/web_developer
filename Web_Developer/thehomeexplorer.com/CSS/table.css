@@ -1,0 +1,80 @@
+
+
+table {
+    width: 20%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    height: 50px;
+    border-bottom: 2px solid;
+    background-color: greenyellow;
+}
+td {
+    padding: 15px;
+    text-align: left ;
+    height: 25px;
+    vertical-align: bottom;
+    border-bottom: 1px solid;
+}
+
+tr:hover {
+    background-color: coral;
+}
+
+td:nth-child(even) {
+    background-color: rgb(61, 159, 245);
+}
+
+/* fantacy table create */
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+ /* display properties */
+  .imgbox {
+    float: left;
+    text-align: center;
+    width: 120px;
+    border: 1px solid gray;
+    margin: 4px;
+    padding: 6px;
+  }
+  
+  button {
+    width: 100%;
+  }
+
+  /* display flip */
+  #panel, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: solid 1px #a6d8a8;
+    margin: auto;
+  }
+  
+  #panel {
+    display: none;
+  }

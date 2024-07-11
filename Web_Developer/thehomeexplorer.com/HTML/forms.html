@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Forms Page</title>
+        <link rel="stylesheet" href="../CSS/forms.css">
+    </head>
+    <body>
+        <h1>Using CSS to style an HTML Form</h1>
+
+        <!-- I am using action="URL Link" attribute to the submit of data -->
+
+        <!-- target attribute _blank value, it's means open another page
+             _self value, it's means open current page
+             _parent value, _top value -->
+        <div>
+            <form action="./success.html" target="_parent" method="post" autocomplete="off">
+        
+                <!-- I am using button element and see how react -->
+                <input type="button" onclick="alert('Please clearly fillup this form, review not allowd!')" value="See this Instruction!"><br>
+
+                <fieldset>
+                        <legend>Personal info</legend>
+                <!-- I am using <label></label> & <input type=""> element -->
+                <label for="fname">First Name</label><br>
+                <input type="text" id="fname" name="fname" value="Tarikul"><br>
+                
+                <!-- I am using hidden attribute -->
+                <input type="hidden" id="custId" name="custId" value="1820">
+
+                <label for="lname">Last Name</label><br>
+                <input type="text" id="lname" name="lname" value="Islam"><br>
+
+                <label>Gender:</label>
+                <!-- I am using <select></select> & <option></option> element -->
+                <select>
+                    <option> Male </option>
+                    <option> Female </option>
+                </select>
+                <br>
+                </fieldset>
+                <!-- I have file attachment -->
+                <fieldset>
+                    <legend>File upload</legend>
+                <p>Show a file-select field which allows a file to be chosen for upload:</p>
+                <label for="myfile">Select a file:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                </fieldset>
+
+                <!-- I am using date, month attribute      type="date" is not supported in Internet Explorer 11. -->
+                <fieldset>
+                    <legend>Date</legend>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday"><br>
+
+                <!-- Note: type="month" is not supported in Firefox, Safari, or Internet Explorer 11. -->
+                <label for="bdaymonth">Birthday (Month and Year):</label>
+                <input type="month" id="bdaymonth" name="bdaymonth"><br>
+
+                <!-- <h2>Date Field Restrictions</h2>
+                <p>Use the min and max attributes to add restrictions to dates:</p> -->
+                <label for="datemin">Enter a date after 2000-01-02:</label>
+                <input type="date" id="datemin" name="datemin" min="2000-01-02"><br>
+                <label for="datemax">Enter a date after 1979-12-31:</label>
+                <input type="date" id="datemax" name="datemax" max="1979-12-31"><br>
+                </fieldset>
+
+                <!-- I am using color selection element -->
+                <fieldset>
+                    <legend>Color</legend>
+                <label for="favcolor">Select your favourite color</label>
+                <input type="color" id="favcolor" name="favcolor"><br>
+                </fieldset>
+                
+                <!-- I am using <textarea></textarea> element tag for expand area -->
+                <fieldset>
+                    <legend>Address & Other info</legend>
+                <label>Full Address</label><br>
+                <textarea name="address" rows="10" cols="50">
+
+                    
+                </textarea><br>
+
+                <!-- I am using search element show -->
+                <label for="gsearch">Search Google:</label>
+                <input type="search" id="gsearch" name="gsearch"><br>
+
+                <!-- Restriction Numeric -->
+                <lable for="quantity">Age</lable><br>
+                <input type="number" id="quantity" name="quantity" min="18" max="35"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact info</legend>
+                <lable for="contact">Contact No</lable><br>
+                <input type="number" id="contact" name="contact" maxlength="10" size="10"><br>
+
+                <label for="email">Email Address</label><br>
+                <input type="email" id="email"><br>
+                
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd" required><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choose your favourite </legend>
+                <!-- I am using radio -->
+                <p>Choose your favourite Web language:</p>
+                
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+                
+                <!-- I am using checkbox -->
+                <p>Which you have:</p>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">Bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2">Car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3">Boat</label><br><br>
+                
+                <p>Which browser you have choose</p>
+                <input list="browsers" name="browsers">
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+                </fieldset>
+                
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+                
+                <!-- I am using image as a submit button
+
+                <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBInXuEUdPGhHmdr8ZAfjJcESMLDA3sbXHgg&usqp=CAU" alt="Submit" width="80" height="48"> -->
+
+            </form>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables Page</title>
+        <link rel="stylesheet" href="../CSS/table.css">
+    </head>
+    <body>
+        <h1> HTML Table </h1>
+        <h3> Person info with data </h3>
+
+    <!--    I am creating Table     -->
+    <table>
+        <tr>
+            <th colspan="4"> Contact info </th>
+        </tr>
+        <tr>
+            <th colspan="2"> Name </th>
+            <th> Address </th>
+            <th> Phone # </th>
+        </tr>
+        <tr>
+            <td> Tarikul </td>
+            <td> Islam </td>
+            <td> Kolkata </td>
+            <td> 8348060245 </td>
+        </tr>
+        <tr>
+            <td> Sadikul </td>
+            <td> Sk </td>
+            <td> Jharkhand </td>
+            <td> 9382432502 </td>
+        </tr>
+        <tr>
+            <td> Samirul </td>
+            <td> Sk </td>
+            <td> Kolkata </td>
+            <td> 9523678330 </td>
+        </tr>
+        <tr>
+            <td> Jenarul </td>
+            <td> Sk </td>
+            <td> Chennnai </td>
+            <td> 9556776497 </td>
+        </tr>
+        <tr>
+            <td> Md Tohidul </td>
+            <td> Sk </td>
+            <td> Bengaluru </td>
+            <td> 7063071736 </td>
+        </tr>
+
+            </table>
+            <hr>
+            <h2>Responsive Table</h2>
+        <p>A responsive table will display a horizontal scroll bar if the screen is too 
+        small to display the full content. Resize the browser window to see the effect:</p>
+        <p>To create a responsive table, add a container element (like div) with <strong>overflow-x:auto</strong> around the table element:</p>
+
+        <div style="overflow-x: auto;">
+        <table>
+            <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            <th>Points</th>
+            </tr>
+            <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+            </tr>
+            <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            <td>94</td>
+            </tr>
+            <tr>
+            <td>Adam</td>
+            <td>Johnson</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            <td>67</td>
+            </tr>
+        </table>
+        </div>
+        <hr>
+
+                <h1>A Fancy Table</h1>
+
+        <table id="customers">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+        </tr>
+        </table>
+        
+        <hr>
+        <h3>Difference between display:none and visiblity: hidden</h3>
+            <p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+            <p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+
+            <div class="imgbox" id="imgbox1">Box 1<br>
+            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Italy" style="width:100%">
+            <button onclick="removeElement()">Remove</button>
+            </div>
+
+            <div class="imgbox" id="imgbox2">Box 2<br>
+            <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Lights" style="width:100%">
+            <button onclick="changeVisibility()">Hide</button>
+            </div>
+
+            <div class="imgbox">Box 3<br>
+            <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Forest" style="width:100%">
+            <button onclick="resetElement()">Reset All</button>
+            </div>
+
+            <script>
+                function removeElement() {
+                  document.getElementById("imgbox1").style.display = "none";
+                }
+                
+                function changeVisibility() {
+                  document.getElementById("imgbox2").style.visibility = "hidden";
+                }
+                
+                function resetElement() {
+                  document.getElementById("imgbox1").style.display = "block";
+                  document.getElementById("imgbox2").style.visibility = "visible";
+                }
+                </script>
+            
+            <hr>
+            <!-- flip -->
+            
+            <p class="flip" onclick="myFunction()">Click to show panel</p>
+
+            <div id="panel">
+            <p>This panel contains a div element, which is hidden by default (display: none).</p>
+            <p>It is styled with CSS and we use JavaScript to show it (display: block).</p>
+            <p>How it works: Notice that the p element with class="flip" has an onclick attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+            <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+            </div>
+
+            <script>
+            function myFunction() {
+            document.getElementById("panel").style.display = "block";
+            }
+            </script>
+
+            
+            
+    </body>
+</html>

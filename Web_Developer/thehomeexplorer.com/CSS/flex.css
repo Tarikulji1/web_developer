@@ -1,0 +1,29 @@
+/* Container */
+
+.flexbox {
+    background-color: aquamarine;
+    border: 2px solid red;
+    display: flex;
+    height: 400px;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    /* flex-flow: row wrap; */
+    justify-content: flex-end;
+    align-items: center;
+    align-content: space-evenly;
+
+
+} /* parent element container  */
+
+
+
+
+
+
+/* child element container */
+.flexbox-item {
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+}
